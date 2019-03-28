@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntidadBase.cs" />
+    <Compile Include="GeneroBd.cs" />
     <Compile Include="HobbyBd.cs" />
     <Compile Include="PersonaBd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

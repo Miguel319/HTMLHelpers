@@ -26,17 +26,17 @@ namespace BLL
 
         public async Task Agregar(Persona Persona)
         {
-            obj.Agregar(Persona);
+           await obj.Agregar(Persona);
         }
 
         public async Task Actualizar(Persona Persona)
         {
-            obj.Actualizar(Persona);
+           await obj.Actualizar(Persona);
         }
 
         public async Task Eliminar(int id)
         {
-            obj.Eliminar(id);
+            await obj.Eliminar(id);
         }
     }
 }

@@ -74,6 +74,7 @@
     <Compile Include="Persona.cs">
       <DependentUpon>HTMLHelperModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="PersonaValidacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs">
       <DependentUpon>HTMLHelperModel.tt</DependentUpon>

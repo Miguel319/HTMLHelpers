@@ -5,33 +5,33 @@ using DAL;
 
 namespace BLL
 {
-    public class HobbyBs
+    public class GeneroBs
     {
-        private HobbyBd obj;
+        private GeneroBd obj;
 
-        public HobbyBs()
+        public GeneroBs()
         {
-            obj = new HobbyBd();
+            obj = new GeneroBd();
         }
 
-        public async Task<IEnumerable<Hobby>> Todos()
+        public async Task<IEnumerable<Genero>> Todos()
         {
             return await obj.Todos();
         }
 
-        public async Task<Hobby> ObtenerPorId(int id)
+        public async Task<Genero> ObtenerPorId(int id)
         {
             return await obj.ObtenerPorId(id);
         }
 
-        public async Task Agregar(Hobby hobby)
+        public async Task Agregar(Genero Genero)
         {
-           await obj.Agregar(hobby);
+            await obj.Agregar(Genero);
         }
 
-        public async Task Actualizar(Hobby hobby)
+        public async Task Actualizar(Genero Genero)
         {
-            await obj.Actualizar(hobby);
+            await obj.Actualizar(Genero);
         }
 
         public async Task Eliminar(int id)
