@@ -9,9 +9,6 @@
 
 namespace BOL
 {
-    using System;
-    using System.Collections.Generic;
-    
     public partial class Usuario
     {
         public int Id { get; set; }

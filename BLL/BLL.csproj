@@ -41,7 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HobbyBs.cs" />
+    <Compile Include="PersonaBs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioBs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BOL\BOL.csproj">
+      <Project>{be3bad8a-faa1-4953-8bd1-6ac0db3280ea}</Project>
+      <Name>BOL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{9b3d41f7-6f4d-4edb-bbe1-ad38c25a2205}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
