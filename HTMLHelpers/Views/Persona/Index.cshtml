@@ -34,10 +34,10 @@
             @Html.DisplayNameFor(model => model.Hobbys)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Genero.Descripcion)
+            @Html.DisplayName("Género/sexo")
         </th>
         <th>
-            @Html.ActionLink("Agregar", "Agregar", "Persona",  new{@class ="btn btn-primary"})
+            @Html.ActionLink("     Agregar", "Agregar", "Persona",  new{@class ="far fa-plus-square btn btn-success col-md-11"})
         </th>
     </tr>
 
@@ -71,9 +71,9 @@
                 @Html.DisplayFor(modelItem => item.Genero.Descripcion)
             </td>
             <td>
-                @Html.ActionLink("Editar", "Editar", new { id=item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-                @Html.ActionLink("Eliminar", "Eliminar", new { id=item.Id }, new{@class = "btn btn-danger", onclick= "return confirmar();"})
+                @Html.ActionLink("Editar", "Editar", new { id=item.Id }, new{@class="fa fa-edit fa-lg btn btn-primary"}) |
+                @Html.ActionLink("Info", "Detalles", new { id=item.Id }, new{@class = "fa fa-info btn btn-info"}) |
+                @Html.ActionLink("Eliminar", "Eliminar", new { id=item.Id }, new{@class = "fa fa-trash-alt btn btn-danger ml-1", onclick= "return confirmar();"})
             </td>
         </tr>
     }

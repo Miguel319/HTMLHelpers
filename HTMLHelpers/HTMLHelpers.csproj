@@ -179,11 +179,11 @@
     <Content Include="Views\Persona\Index.cshtml" />
     <Content Include="Views\Persona\Agregar.cshtml" />
     <Content Include="Views\Persona\Editar.cshtml" />
+    <Content Include="Views\Principal\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Principal\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

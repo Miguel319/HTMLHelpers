@@ -17,7 +17,6 @@ namespace DAL
             return await db.Hobby.FindAsync(id);
         }
 
-
         public async Task Agregar(Hobby Hobby)
         {
             db.Hobby.Add(Hobby);

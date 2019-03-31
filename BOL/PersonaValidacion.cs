@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -16,11 +15,17 @@ namespace BOL
             var emailValor = (string) value;
             int unico = db.Persona.Where(x => x.Email == emailValor).ToList().Count();
 
+            if (unico != 0)
+            {
+                return new ValidationResult("Ya hay una persona con este correo electrónico");
+            }
+
+            return ValidationResult.Success;
+            /*
             var retornar = (unico != 0)
                 ? new ValidationResult("Ya hay una persona con este correo electrónico")
                 : ValidationResult.Success;
-
-            return retornar;
+            return retornar;*/
         }
     }
 
@@ -40,19 +45,25 @@ namespace BOL
         public string Telefono { get; set; }
         [Required(ErrorMessage = "El email es obligatorio.")]
         [EmailAddress(ErrorMessage = "Debe introducir un correo electrónico.")]
-        [EmailUnico(ErrorMessage = "Ya otro usuario con este mismo correo electrónico.")]
         public string Email { get; set; }
         [DisplayName("Género/sexo")]
         public Nullable<int> GeneroId { get; set; }
         [DisplayName("Estado civil")]
         public string EstadoCivil { get; set; }
+        [Required(ErrorMessage = "Los hobbies son obligatorios.")]
+        [DisplayName("Hobbies")]
         public string Hobbys { get; set; }
-        public IEnumerable<Hobby> Hobbies { get; set; }
+        public List<Hobby> Hobbies { get; set; }
     }
 
     [MetadataType(typeof(PersonaValidacion))]
     public partial class Persona
     {
-        public IEnumerable<Hobby> Hobbies { get; set; }
+        public List<Hobby> Hobbies { get; set; }
+
+        public Persona()
+        {
+            Hobbies = new List<Hobby>();
+        }
     }
 }

@@ -9,13 +9,11 @@
 
 namespace BOL
 {
-    using System;
-    using System.Collections.Generic;
-    
+
     public partial class Hobby
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
-        public Nullable<bool> Cotejado { get; set; }
+        public bool Cotejado { get; set; }
     }
 }
