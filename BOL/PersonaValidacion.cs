@@ -19,13 +19,7 @@ namespace BOL
             {
                 return new ValidationResult("Ya hay una persona con este correo electrónico");
             }
-
             return ValidationResult.Success;
-            /*
-            var retornar = (unico != 0)
-                ? new ValidationResult("Ya hay una persona con este correo electrónico")
-                : ValidationResult.Success;
-            return retornar;*/
         }
     }
 

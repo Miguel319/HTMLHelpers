@@ -3,7 +3,8 @@
 @{
     ViewBag.Title = "Agregar";
 }
-<h3 class="text-center" style="font-weight: bold">Agregar persona</h3>
+<br/>
+<h4 class="text-center" style="font-weight: bold">Agregar persona</h4>
 <hr/>
 
 @using (Html.BeginForm("Agregar", "Persona", FormMethod.Post)) 
@@ -83,7 +84,6 @@
                 <div class="col-md-10">
                     @{
                         List<string> lista = ViewBag.Hobbies;
-
                         foreach (var i in lista)
                         {
                             <input type="checkbox" name="Hobbys" value="@i"/>@i

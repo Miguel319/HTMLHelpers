@@ -80,6 +80,7 @@
     <Compile Include="Usuario.cs">
       <DependentUpon>HTMLHelperModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioValidacion.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="HTMLHelperModel.edmx">

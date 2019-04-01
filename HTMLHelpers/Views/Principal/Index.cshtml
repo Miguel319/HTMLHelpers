@@ -3,5 +3,34 @@
     ViewBag.Title = "Index";
 }
 
-<h2 class="text-center">Bienvenido/a</h2>
+<h2 class="text-center">Bienvenido/a HTML Helpers</h2>
+<br/>
 
+<div class="col-md-6">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Tecnologías utilizadas</h3>
+        </div>
+        <div class="panel-body">
+            Esta aplicación WEB fue desarrollada con el modelo de la programación por capas a fin de separar las responsabilidades en módulos mantenibles y reutilizables: capa de presentación, capa de negocios y capa de datos.
+            <br />
+            <br /> Las tecnologías utilizadas son:
+            <br />
+            <br />  •  ASP.NET MVC
+            <br />  •  Entity Framework
+            <br />  •  C#.NET
+            <br />  •  HTML Helpers
+            <br />  •  Bootstrap
+            <br />  •  MS SQL Server
+        </div>
+    </div>
+</div>
+
+
+
+@using (Html.BeginForm("Index", "Persona", FormMethod.Get))
+{
+    @Html.AntiForgeryToken()
+
+    <input type="submit" value="Acceder" class="btn btn-primary"/>
+}
